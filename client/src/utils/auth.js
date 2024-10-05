@@ -4,7 +4,7 @@ import decode from 'jwt-decode';
 const { GraphQLError } = require('graphql');
 const jwt = require('jsonwebtoken');
 
-const secret = 'secret';
+const secret = process.env.SECRET || 'secret';
 const expiration = '2h';
 
 // create a new class to instantiate for a user
